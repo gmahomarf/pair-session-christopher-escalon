@@ -11,4 +11,8 @@ describe('Calculator', function() {
     it('test one number', () => {
         assert.equal(calc.Add('5'), 5);
     })
+
+    it('Test two numbers', function() {
+        assert.equal(calc.Add('1,2'), 3);
+    })
 })
