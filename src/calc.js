@@ -5,7 +5,7 @@ module.exports = class Calculator
         if(numbers === '')
             return 0;
         const numberArray = numbers.split(',');
-        const sum = parseInt(numberArray[0]) + parseInt(numberArray[1] || '0');
+        const sum = numberArray.reduce( (a, b) => parseInt(a) + parseInt(b) );
         return sum;
     }
 }
