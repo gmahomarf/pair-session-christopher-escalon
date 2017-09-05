@@ -7,4 +7,8 @@ describe('Calculator', function() {
     it('Test no numbers', function() {
         assert.equal(calc.Add(''), 0);
     });
+
+    it('test one number', () => {
+        assert.equal(calc.Add('5'), 5);
+    })
 })

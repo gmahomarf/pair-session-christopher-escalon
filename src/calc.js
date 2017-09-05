@@ -2,6 +2,6 @@ module.exports = class Calculator
 {
     Add(numbers)
     {
-        return;
+        return 0;
     }
 }
