@@ -15,4 +15,17 @@ describe('Calculator', function() {
     it('Test two numbers', function() {
         assert.equal(calc.Add('1,2'), 3);
     })
+
+    it('Test unknown amount of numbers', () => {
+        const numbers = [];
+        const amount = Math.floor(Math.random() * 20) + 1;
+        for (let i = 0; i < amount; i++) {
+            let number = Math.floor(Math.random() * 20) + 1;
+            numbers.push(number)
+        }
+
+        const expectedSum = numbers.reduce((sum, num) => sum + num, 0);
+        const args = numbers.join(',');
+        assert.equal(calc.Add(args), expectedSum);
+    });
 })

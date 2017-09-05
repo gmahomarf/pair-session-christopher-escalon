@@ -4,6 +4,8 @@ module.exports = class Calculator
     {
         if(numbers === '')
             return 0;
-        return parseInt(numbers);
+        const numberArray = numbers.split(',');
+        const sum = parseInt(numberArray[0]) + parseInt(numberArray[1] || '0');
+        return sum;
     }
 }
